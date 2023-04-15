@@ -24,7 +24,7 @@ inline long long nanoTime()
 
 int main()
 {
-	Window::createWindow(16*70, 9*70, "test");
+	Window::createWindow(800,800, "test");
 
     Window::setVisible(true);
     Window::setPosition(400, 100);
@@ -41,22 +41,10 @@ int main()
     SceneManager::init();
 
     
-    SceneManager::registerScene<TestTerrainScene>("Terrain");
-    SceneManager::registerScene<TestSkyScene>("Sky");
-    SceneManager::registerScene<TestFBScene>("Framebuffer");
-    SceneManager::registerScene<TestShadowsScene>("Shadows");
-    SceneManager::registerScene<TestCamerasScene>("Cameras");
-    SceneManager::registerScene<TestComputeShader>("Compute Shader");
-    SceneManager::registerScene<TestInstancedScene>("Instanced");
-    SceneManager::registerScene<TestBloomScene>("Bloom");
-    SceneManager::registerScene<TestWater>("Water");
-    SceneManager::registerScene<POC1Scene>("POC 1");
-    SceneManager::registerScene<POC2Scene>("POC 2");
-    SceneManager::registerScene<POC3Scene>("POC 3");
-    SceneManager::registerScene<POC4Scene>("POC 4");
+    SceneManager::registerScene<RayTracingScene>("Main");
     
 
-    SceneManager::switchToScene(2);
+    SceneManager::switchToScene(1);
 
     //===========================================================//
 

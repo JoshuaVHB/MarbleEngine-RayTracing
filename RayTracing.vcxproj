@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{914CCB65-08A9-466A-A2EC-CB8FDAD0A72A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\programming\MarbleEngine-RayTracing\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\programming\MarbleEngine-RayTracing\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>C:\programming\MarbleEngine-RayTracing\Libraries\include;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\programming\MarbleEngine-RayTracing\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\programming\MarbleEngine-RayTracing\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>C:\programming\MarbleEngine-RayTracing\Libraries\include;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\programming\MarbleEngine-RayTracing\Libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\programming\MarbleEngine-RayTracing\Libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="marble\abstraction\animation\Joint.cpp" />
+    <ClCompile Include="marble\abstraction\Camera.cpp" />
+    <ClCompile Include="marble\abstraction\ComputeShader.cpp" />
+    <ClCompile Include="marble\abstraction\Cubemap.cpp" />
+    <ClCompile Include="marble\abstraction\FrameBufferObject.cpp" />
+    <ClCompile Include="marble\abstraction\IndexBufferObject.cpp" />
+    <ClCompile Include="marble\abstraction\Inputs.cpp" />
+    <ClCompile Include="marble\abstraction\Mesh.cpp" />
+    <ClCompile Include="marble\abstraction\Shader.cpp" />
+    <ClCompile Include="marble\abstraction\stb_image_impl.cpp" />
+    <ClCompile Include="marble\abstraction\Texture.cpp" />
+    <ClCompile Include="marble\abstraction\TextureAtlas.cpp" />
+    <ClCompile Include="marble\abstraction\UnifiedRenderer.cpp" />
+    <ClCompile Include="marble\abstraction\VertexArray.cpp" />
+    <ClCompile Include="marble\abstraction\VertexBufferObject.cpp" />
+    <ClCompile Include="marble\abstraction\Window.cpp" />
+    <ClCompile Include="marble\sandbox\Scene.cpp" />
+    <ClCompile Include="marble\utils\Debug.cpp" />
+    <ClCompile Include="marble\vendor\glad.c" />
+    <ClCompile Include="marble\vendor\imgui\imgui.cpp" />
+    <ClCompile Include="marble\vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="marble\vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="marble\vendor\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="marble\vendor\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="marble\vendor\imgui\imgui_tables.cpp" />
+    <ClCompile Include="marble\vendor\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="marble\world\Grass.cpp" />
+    <ClCompile Include="marble\world\Player.cpp" />
+    <ClCompile Include="marble\world\props\PropsManager.cpp" />
+    <ClCompile Include="marble\world\Sky.cpp" />
+    <ClCompile Include="marble\world\SunCameraHelper.cpp" />
+    <ClCompile Include="marble\world\terraingeneration\HeightMap.cpp" />
+    <ClCompile Include="marble\world\terraingeneration\Noise.cpp" />
+    <ClCompile Include="marble\world\terraingeneration\Terrain.cpp" />
+    <ClCompile Include="marble\world\water\Water.cpp" />
+    <ClCompile Include="marble\world\water\WaterRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libraries\include\glad\glad.h" />
+    <ClInclude Include="libraries\include\glfw\glfw3.h" />
+    <ClInclude Include="libraries\include\glfw\glfw3native.h" />
+    <ClInclude Include="libraries\include\khr\khrplatform.h" />
+    <ClInclude Include="libraries\include\stb\stb_image.h" />
+    <ClInclude Include="libraries\include\stb\stb_image_write.h" />
+    <ClInclude Include="marble\abstraction\animation\AnimatedModel.h" />
+    <ClInclude Include="marble\abstraction\animation\Animation.h" />
+    <ClInclude Include="marble\abstraction\animation\Animator.h" />
+    <ClInclude Include="marble\abstraction\animation\Joint.h" />
+    <ClInclude Include="marble\abstraction\animation\JointTransform.h" />
+    <ClInclude Include="marble\abstraction\animation\KeyFrame.h" />
+    <ClInclude Include="marble\abstraction\Camera.h" />
+    <ClInclude Include="marble\abstraction\ComputeShader.h" />
+    <ClInclude Include="marble\abstraction\Cubemap.h" />
+    <ClInclude Include="marble\abstraction\DeferredRenderer.h" />
+    <ClInclude Include="marble\abstraction\FrameBufferObject.h" />
+    <ClInclude Include="marble\abstraction\IndexBufferObject.h" />
+    <ClInclude Include="marble\abstraction\Inputs.h" />
+    <ClInclude Include="marble\abstraction\Mesh.h" />
+    <ClInclude Include="marble\abstraction\pipeline\Bloom.h" />
+    <ClInclude Include="marble\abstraction\pipeline\bloom\BloomFBO.h" />
+    <ClInclude Include="marble\abstraction\pipeline\bloom\BloomRenderer.h" />
+    <ClInclude Include="marble\abstraction\pipeline\Contrast.h" />
+    <ClInclude Include="marble\abstraction\pipeline\Flares.h" />
+    <ClInclude Include="marble\abstraction\pipeline\GammaCorrection.h" />
+    <ClInclude Include="marble\abstraction\pipeline\LensMask.h" />
+    <ClInclude Include="marble\abstraction\pipeline\Saturation.h" />
+    <ClInclude Include="marble\abstraction\pipeline\Sharpness.h" />
+    <ClInclude Include="marble\abstraction\pipeline\SSAO.h" />
+    <ClInclude Include="marble\abstraction\pipeline\VFX.h" />
+    <ClInclude Include="marble\abstraction\pipeline\VFXPipeline.h" />
+    <ClInclude Include="marble\abstraction\Shader.h" />
+    <ClInclude Include="marble\abstraction\SpecializedRender.h" />
+    <ClInclude Include="marble\abstraction\Texture.h" />
+    <ClInclude Include="marble\abstraction\TextureAtlas.h" />
+    <ClInclude Include="marble\abstraction\UnifiedRenderer.h" />
+    <ClInclude Include="marble\abstraction\VertexArray.h" />
+    <ClInclude Include="marble\abstraction\VertexBufferObject.h" />
+    <ClInclude Include="marble\abstraction\Window.h" />
+    <ClInclude Include="marble\RayTracing\Plane.h" />
+    <ClInclude Include="marble\RayTracing\Random.h" />
+    <ClInclude Include="marble\RayTracing\Ray.h" />
+    <ClInclude Include="marble\RayTracing\Renderer.h" />
+    <ClInclude Include="marble\RayTracing\Shape.h" />
+    <ClInclude Include="marble\RayTracing\Sphere.h" />
+    <ClInclude Include="marble\sandbox\Scene.h" />
+    <ClInclude Include="marble\sandbox\scenes\DeferredScene.h" />
+    <ClInclude Include="marble\sandbox\scenes\POC1.h" />
+    <ClInclude Include="marble\sandbox\scenes\POC2.h" />
+    <ClInclude Include="marble\sandbox\scenes\POC3.h" />
+    <ClInclude Include="marble\sandbox\scenes\POC4.h" />
+    <ClInclude Include="marble\Sandbox\Scenes\RayTracingScene.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestBloom.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestCameras.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestComputeShader.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestFB.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestInstanced.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestShadows.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestSky.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestTerrain.h" />
+    <ClInclude Include="marble\sandbox\scenes\TestWater.h" />
+    <ClInclude Include="marble\sandbox\Tests.h" />
+    <ClInclude Include="marble\utils\AABB.h" />
+    <ClInclude Include="marble\utils\BoundingSphere.h" />
+    <ClInclude Include="marble\utils\Debug.h" />
+    <ClInclude Include="marble\utils\Mathf.h" />
+    <ClInclude Include="marble\utils\MathIterators.h" />
+    <ClInclude Include="marble\utils\StringUtils.h" />
+    <ClInclude Include="marble\utils\Transform.h" />
+    <ClInclude Include="marble\vendor\imgui\imconfig.h" />
+    <ClInclude Include="marble\vendor\imgui\imgui.h" />
+    <ClInclude Include="marble\vendor\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="marble\vendor\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="marble\vendor\imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="marble\vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="marble\vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="marble\vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="marble\vendor\imgui\imstb_truetype.h" />
+    <ClInclude Include="marble\world\Grass.h" />
+    <ClInclude Include="marble\world\light\Light.h" />
+    <ClInclude Include="marble\world\light\LightManager.h" />
+    <ClInclude Include="marble\world\Player.h" />
+    <ClInclude Include="marble\world\props\PropsManager.h" />
+    <ClInclude Include="marble\world\Sky.h" />
+    <ClInclude Include="marble\world\SunCameraHelper.h" />
+    <ClInclude Include="marble\world\terraingeneration\HeightMap.h" />
+    <ClInclude Include="marble\world\terraingeneration\Noise.h" />
+    <ClInclude Include="marble\world\terraingeneration\PerlinNoise.hpp" />
+    <ClInclude Include="marble\world\terraingeneration\Terrain.h" />
+    <ClInclude Include="marble\world\terraingeneration\TerrainImpl.h" />
+    <ClInclude Include="marble\world\water\Water.h" />
+    <ClInclude Include="marble\world\water\WaterRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Libraries\lib\glfw3.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

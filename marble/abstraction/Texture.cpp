@@ -53,7 +53,7 @@ Texture::Texture(unsigned int width, unsigned int height)
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
-  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, m_width, m_height, 0, GL_RGBA, GL_FLOAT, nullptr);
+  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16, m_width, m_height, 0, GL_RGBA, GL_FLOAT, nullptr);
   glBindTexture(GL_TEXTURE_2D, 0);
 }
 
@@ -114,14 +114,21 @@ void Texture::changeColor(uint32_t color)
   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, getWidth(), getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, &color);
 }
 
+void Texture::setData(const void* data) {
+
+
+	glTextureSubImage2D(m_rendererID, 0, 0,0,  m_width, m_height, GL_RGBA, GL_UNSIGNED_BYTE,data);
+
+}
+
 Texture Texture::createTextureFromData(const float *data, int width, int height, int floatPerPixel)
 {
   unsigned int rendererId;
   glGenTextures(1, &rendererId);
   glBindTexture(GL_TEXTURE_2D, rendererId);
 
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
 

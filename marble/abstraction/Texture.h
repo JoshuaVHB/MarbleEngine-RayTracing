@@ -30,6 +30,8 @@ public:
 
   static void bindFromId(unsigned int texId, unsigned int slot=0);
 
+  void setData(const void* data);
+
   /* fill the texture with the given rgba value */
   void changeColor(uint32_t color);
 
